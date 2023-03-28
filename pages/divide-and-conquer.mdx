@@ -1,9 +1,66 @@
 ---
-title: Abhijith's research repository
-description: 
+title: A new approach to divide and conquer
+description:
   "Discover a vast collection of groundbreaking research in Computer Science,
   compiled here. From cutting-edge studies to in-depth analysis, our repository is your one-stop destination for the latest
   findings and insights. Explore our resources and stay up-to-date with the latest trends and developments in CS, AI and Cloud."
 ---
 
+import ThumbNail from "../components/thumbnail";
+
 # Divide and Conquer
+
+{" "}
+
+<ThumbNail />
+
+## Abstract
+
+Algorithmicians employ various approaches to simplify a problem and solve them efficiently, one such approach is Divide and Conquer, where the problem is broken down into smaller subproblems where each problem can be solved in a fast manner . Usually divide and conquer algorithms apply division at orders of 2 to achieve logarithmic complexity, in this paper, we discuss the effect of n order division. The implementation of the same has been attached as a reference.
+
+## Introduction
+
+Divide and conquer algorithm initially dates back to the historic era(s) of Babylonia and Euclid where a search tree was implemented using BST. The approach to divide and conquer is as follows,
+
+### Pseudocode
+
+```Pseudocode
+- Given a problem of size n, divide into the problem into 2 smaller subproblems
+- Keep recursively dividing till n is small enough
+- At the smallest size, solve the problem and merge it with the smallest solution
+```
+
+### Visualization
+
+Now, if one tries to find asymptotic time complexity, the time complexity O(n log n )
+Going by the rules of recurrence relation, it can be easily understood that the logarithm term here takes log<sub>2</sub>x. This paper, tries to delve into the possibility of using algorithms that involve complexities log<sub>3</sub>n, log<sub>4</sub>n and the trade-offs associated there with.
+
+## Methods
+
+Just as any divide-conquer and combine method, this problem too has two different sub-problems, the first part where the array is divided into sub-arrays of n sizes, and the second part where the array is merged. The merging problem is consistent throughout the sub-divisions, i.e across the cases, the same merging algorithm will be implemented. This is done to reduce the operational complexity of the algorithm. With increase in complexity, the number of O(n) iterations of the same will increase by a factor of n. This can massively increase after n greater than 4.
+
+### Division Method
+
+```Pseudocode
+Find the length of the array
+Implement floor division by n
+Considering that as an index, form sub-array of start_ele to index
+Call merge-sort recursively
+```
+
+### Possible enhancements and Alternative approaches
+
+## Discussions
+
+Discussions
+The metrics of this experiment are as follows:
+
+| Size | Division Base | Time Taken (in nanoseconds) |
+| ---- | ------------- | --------------------------- |
+| 10   | 2             | 0.000000000                 |
+
+## Results and Conclusions
+
+## Acknowledgements and References
+
+## Links to Implementation

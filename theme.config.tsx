@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
 import Head from 'next/head'
 import WebsiteSEO from './components/seo'
+import Logo from './components/logo'
 
 const EmptyComponent: React.FC = () => {
   return (
@@ -39,6 +40,7 @@ const config: DocsThemeConfig = {
   },
   logo: (
     <>
+      <Logo height={16} width={16} />
       <span style={{ fontWeight: 900, textTransform: 'capitalize' }}>Abhijith's research repository</span>
     </>
   ),
@@ -47,8 +49,7 @@ const config: DocsThemeConfig = {
     component: <EmptyComponent />,
   },
   footer: {
-    text: `Abhijith Ganesh © ${new Date().getFullYear()
-      }`,
+    text: <><h1 style={{ fontWeight: 700 }}>Abhijith Ganesh © {new Date().getFullYear()}</h1></>,
   },
 }
 

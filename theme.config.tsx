@@ -21,14 +21,12 @@ const config: DocsThemeConfig = {
     link: 'https://linkedin.com/in/AbhijithGanesh14',
   },
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
-  head: (<Head>
-    Abhijith's research and experiements
-    <meta property='description' content="Discover a vast collection of groundbreaking research in Computer Science,
-            compiled here. From cutting-edge studies to in-depth analysis, our repository is your one-stop destination for the latest 
-            findings and insights. Explore our resources and stay up-to-date with the latest trends and developments in CS, AI and Cloud." />
-    <meta property='og:title' content="Abhijith's research repository" />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
-  </Head>
+  head: (
+    <>
+      <meta property="title">Abhijith's research and experiements</meta>
+      <meta property='description' content= "Discover a vast collection of groundbreaking research in Computer Science, compiled here.From cutting- edge studies to in -depth analysis, our repository is your one - stop destination for the latest findings and insights.Explore our resources and stay up - to - date with the latest trends and developments in CS, AI and Cloud."/>      < meta property='og:title' content="Abhijith's research repository" />
+      <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+    </>
   ),
   feedback: {
     content: <></>
@@ -50,3 +48,4 @@ const config: DocsThemeConfig = {
 }
 
 export default config
+

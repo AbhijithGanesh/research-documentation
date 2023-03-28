@@ -23,9 +23,11 @@ const config: DocsThemeConfig = {
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   head: (
     <>
-      <meta property="title">Abhijith's research and experiements</meta>
-      <meta property='description' content= "Discover a vast collection of groundbreaking research in Computer Science, compiled here.From cutting- edge studies to in -depth analysis, our repository is your one - stop destination for the latest findings and insights.Explore our resources and stay up - to - date with the latest trends and developments in CS, AI and Cloud."/>      < meta property='og:title' content="Abhijith's research repository" />
-      <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+      <Head>
+        <meta property="title">Abhijith's research and experiements</meta>
+        <meta property='description' content="Discover a vast collection of groundbreaking research in Computer Science, compiled here.From cutting- edge studies to in -depth analysis, our repository is your one - stop destination for the latest findings and insights.Explore our resources and stay up - to - date with the latest trends and developments in CS, AI and Cloud." />      < meta property='og:title' content="Abhijith's research repository" />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+      </Head>
     </>
   ),
   feedback: {
@@ -43,7 +45,6 @@ const config: DocsThemeConfig = {
   footer: {
     text: `Abhijith Ganesh © ${new Date().getFullYear()
       }`,
-    // Made with ❤️ using Nextra
   },
 }
 

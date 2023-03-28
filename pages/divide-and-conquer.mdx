@@ -45,7 +45,7 @@ the case of the algorithm MergeSort is being discussed.
 Now, if one tries to find asymptotic time complexity, the time complexity O(n log n )
 Going by the rules of recurrence relation, it can be easily understood that the logarithm term here takes log<sub>2</sub>x. This paper, tries to delve into the possibility of using algorithms that involve complexities log<sub>3</sub>n, log<sub>4</sub>n and the trade-offs associated there with.
 
-<Image src="/division.png" height={500} width={800}/>
+<Image src="/division.png" height={500} width={800} />
 
 ## Methods
 
@@ -98,12 +98,35 @@ making it a significantly more efficient algorithm.
 
 The metrics of this experiment are as follows:
 
-| Size | Division Base | Time Taken (in nanoseconds) |
-| ---- | ------------- | --------------------------- |
-| 10   | 2             | 0.000000000                 |
+| Size   | Division Base | Time Taken (in nanoseconds) |
+| ------ | ------------- | --------------------------- |
+| 1000   | 3             | 396363                      |
+| 10000  | 3             | 7970020                     |
+| 100000 | 3             | 36462811                    |
+| 1000   | 4             | 530112                      |
+| 10000  | 4             | 3607643                     |
+| 100000 | 4             | 31403842                    |
+| 1000   | 5             | 520345                      |
+| 100000 | 5             | 5033564                     |
+| 100000 | 5             | 24772391                    |
 
 ## Results and Conclusions
 
+Through the objective evaluation of the data, one can conclude the increase in divisions reduces the time taken for arrays of large elements,
+but the increase in the number of iterations of the same algorithm increases the time taken for smaller arrays. At the same time, it is also recorded
+that at n = 3, the time taken is significantly less than the other cases, and the time taken is almost constant for n = 4 and n = 5. The time taken is less
+for a smaller array, thus taking a larger division base for a smaller array is not ideal. Through further research, one can establish the peak value/bounding values
+for which the division by large algorithm will start becoming more efficient than the division by 2 algorithm. 
+
+** It must be duly noted that the peak value will be a part of the graph that takes a Gaussian Distribution and through sampling, one can determine the
+peak value.**
+
 ## Acknowledgements and References
 
+- Merge Sort proposed by John Von Neumann in 1945, The art of computer programming by Donald Knuth, ISBN 0-201-89685-0.
+- Merge Sort by Cormen, Et al. ISBN 978-0-262-03293-3.
+
+
 ## Links to Implementation
+
+**Coming soon**

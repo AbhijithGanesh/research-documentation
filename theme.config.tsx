@@ -1,12 +1,8 @@
+import { useRouter } from 'next/router'
+import { DocsThemeConfig, useConfig } from 'nextra-theme-docs'
 import React from 'react'
 import { ImLinkedin2 } from "react-icons/im"
 import 'tailwindcss/tailwind.css'
-import { DocsThemeConfig } from 'nextra-theme-docs'
-import { useRouter } from 'next/router'
-import { useConfig } from 'nextra-theme-docs'
-import Head from 'next/head'
-import WebsiteSEO from './components/seo'
-import Logo from './components/logo'
 
 const EmptyComponent: React.FC = () => {
   return (
@@ -40,7 +36,6 @@ const config: DocsThemeConfig = {
   },
   logo: (
     <>
-      <Logo height={16} width={16} />
       <span style={{ fontWeight: 900, textTransform: 'capitalize' }}>Abhijith's research repository</span>
     </>
   ),

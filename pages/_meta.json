@@ -1,15 +1,19 @@
 {
   "index": "Introduction",
   "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
   "about": {
     "title": "About",
     "type": "page"
   },
   "contact": {
-    "title": "Contact ↗",
+    "title": "Contact",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://linkedin.com/in/AbhijithGanesh14",
     "newWindow": true
+  },
+  "table of contents":{
+    "title": "Index",
+    "type":"page",
+    "href": "./toc"
   }
 }

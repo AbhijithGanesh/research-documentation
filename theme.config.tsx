@@ -1,18 +1,23 @@
 import React from 'react'
+import { ImLinkedin2 } from "react-icons/im"
 import 'tailwindcss/tailwind.css'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <span>Abhijith's research repository</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: 'https://github.com/AbhijithGanesh/',
   },
   chat: {
-    link: 'https://discord.com',
+    icon: <ImLinkedin2 />,
+    link: 'https://linkedin.com/in/AbhijithGanesh14',
   },
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  head: <><title>Abhijith's research repository</title></>,
   footer: {
-    text: 'Nextra Docs Template',
+    text: `Abhijith Ganesh © ${new Date().getFullYear()
+      }`,
+    // Made with ❤️ using Nextra
   },
 }
 

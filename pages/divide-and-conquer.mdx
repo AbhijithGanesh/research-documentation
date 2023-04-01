@@ -5,7 +5,7 @@ description: "An empirical approach to k way merge sorting with visualization an
 
 import ThumbNail from "../components/thumbnail";
 import Image from "next/image";
-import MyComponent from "../components/links";
+import Implementation from "../components/links";
 
 # Divide and Conquer
 
@@ -43,7 +43,12 @@ the case of the algorithm MergeSort is being discussed.
 Now, if one tries to find asymptotic time complexity, the time complexity O(n log n )
 Going by the rules of recurrence relation, it can be easily understood that the logarithm term here takes log<sub>2</sub>x. This paper, tries to delve into the possibility of using algorithms that involve complexities log<sub>3</sub>n, log<sub>4</sub>n and the trade-offs associated there with.
 
-<Image src="/division.png" height={500} width={800} alt="Implementation of a 4 way sort"/>
+<Image
+  src="/division.png"
+  height={500}
+  width={800}
+  alt="Implementation of a 4 way sort"
+/>
 
 ## Methods
 
@@ -126,13 +131,4 @@ peak value.**
 
 ## Links to Implementation
 
-<section class="flex lg:justify-between lg:w-full">
-  <MyComponent
-    name="View my C++ implementation"
-    link="https://github.com/AbhijithGanesh/research-k-way-division"
-  />
-  {/* <MyComponent
-    name="View my Rust implementation"
-    link="https://github.com/AbhijithGanesh/research-k-way-division"
-  /> */}
-</section>
+<Implementation/>

@@ -1,42 +1,49 @@
-import { useRouter } from 'next/router'
-import { DocsThemeConfig, useConfig } from 'nextra-theme-docs'
-import React from 'react'
-import { ImLinkedin2 } from "react-icons/im"
-import 'tailwindcss/tailwind.css'
+import { useRouter } from "next/router";
+import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
+import React from "react";
+import { ImLinkedin2 } from "react-icons/im";
+import "tailwindcss/tailwind.css";
 
 const EmptyComponent: React.FC = () => {
-  return (
-    <></>
-  )
-}
+  return <></>;
+};
 
 const config: DocsThemeConfig = {
   project: {
-    link: 'https://github.com/AbhijithGanesh/',
+    link: "https://github.com/AbhijithGanesh/",
   },
   chat: {
     icon: <ImLinkedin2 />,
-    link: 'https://linkedin.com/in/AbhijithGanesh14',
+    link: "https://linkedin.com/in/AbhijithGanesh14",
   },
   head: () => {
-    const { asPath, defaultLocale, locale } = useRouter()
-    const { frontMatter } = useConfig()
+    const { asPath, defaultLocale, locale } = useRouter();
+    const { frontMatter } = useConfig();
     const url =
-      'https://research.AbhijithGanesh.com' +
-      (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
+      "https://research.AbhijithGanesh.com" +
+      (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
 
-    return <>
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={frontMatter.title || 'Nextra'} />
-      <meta property="og:description" content={frontMatter.description || 'The next site builder'} />
-    </>
+    return (
+      <>
+        <meta property="og:url" content={url} />
+        <meta property="og:title" content={frontMatter.title || "Abhijith's Research repository"} />
+        <link rel="icon" href="icon.svg" />
+        <meta
+          property="og:description"
+          content={frontMatter.description || "The next site builder"}
+        />
+      </>
+    );
   },
   feedback: {
-    content: <></>
+    content: <></>,
   },
   logo: (
     <>
-      <span style={{ fontWeight: 900, textTransform: 'capitalize' }}>Abhijith's research repository</span>
+      <img src="icon.webp" alt="Abhijith Ganesh" className="h-12 w-12" />
+      <span className="text-lg" style={{ fontWeight: 900 }}>
+        Abhijith's research repository
+      </span>
     </>
   ),
   editLink: {
@@ -44,9 +51,14 @@ const config: DocsThemeConfig = {
     component: <EmptyComponent />,
   },
   footer: {
-    text: <><h1 style={{ fontWeight: 700 }}>Abhijith Ganesh © {new Date().getFullYear()}</h1></>,
+    text: (
+      <>
+        <h1 style={{ fontWeight: 700 }}>
+          Abhijith Ganesh © {new Date().getFullYear()}
+        </h1>
+      </>
+    ),
   },
-}
+};
 
-export default config
-
+export default config;
